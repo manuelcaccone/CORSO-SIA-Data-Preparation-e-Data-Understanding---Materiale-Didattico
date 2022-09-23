@@ -1,0 +1,79 @@
+ID;CodAnagrafica;ImportoPrestazione;ImportoLiquidato;IDTipoPrestazione;Descrizione;IdPrestazione;DescrizionePrestazione
+1;CA0007;160;80;8;Odontoiatria;2604;Otturazione
+2;CA0022;103.19;51.6;1;Visite specialistiche;2;Visita Specialistica
+3;CA0022;36;36;4;Mammografia e ecografia;10800;Mammografia
+4;CA0022;12.19;12.19;2;Analisi laboratorio;10600;Analisi Laboratorio
+5;CA0023;400;125;8;Odontoiatria;2619;Corona 
+6;CA0027;39.89;39.89;2;Analisi laboratorio;10600;Analisi Laboratorio
+7;CA0027;100;50;8;Odontoiatria;2582;Ablazione Tartaro
+8;CA0042;565;125;8;Odontoiatria;2588;Lavorazione Dentaria
+9;CAA001;25.53;25.53;2;Analisi laboratorio;10600;Analisi Laboratorio
+10;CAA001;34.82;34.82;3;Diagnostica per immagini;10700;Diagnostica immagini
+11;CAA001;36;36;4;Mammografia e ecografia;10800;Mammografia
+12;CAA001;100;50;1;Visite specialistiche;2;Visita Specialistica
+13;CAA001;36;36;3;Diagnostica per immagini;10700;Diagnostica immagini
+14;CAA001;130;65;1;Visite specialistiche;2;Visita Specialistica
+15;CAA001;128.19;64.1;1;Visite specialistiche;2;Visita Specialistica
+16;CAA003;36;36;3;Diagnostica per immagini;10700;Diagnostica immagini
+17;CAA003;36;36;3;Diagnostica per immagini;10700;Diagnostica immagini
+18;CAA003;23.79;23.79;2;Analisi laboratorio;10600;Analisi Laboratorio
+19;CAA003;50;25;1;Visite specialistiche;2;Visita Specialistica
+20;CAA003;110;55;1;Visite specialistiche;2;Visita Specialistica
+21;CAA003;85;42.5;1;Visite specialistiche;2;Visita Specialistica
+22;CAA003;70;35;1;Visite specialistiche;2;Visita Specialistica
+23;CAA003;42.81;42.81;2;Analisi laboratorio;10600;Analisi Laboratorio
+24;CAA003;330;165;8;Odontoiatria;2604;Otturazione
+25;CAA011;2.35;2.35;2;Analisi laboratorio;10600;Analisi Laboratorio
+26;CAA011;36.15;36.15;2;Analisi laboratorio;10600;Analisi Laboratorio
+27;CAA011;25.45;25.45;2;Analisi laboratorio;10600;Analisi Laboratorio
+28;CAA011;36.15;36.15;4;Mammografia e ecografia;10800;Mammografia
+29;CAA013;23.51;23.51;1;Visite specialistiche;10500;Visita Specialistica
+30;CAA016;1400;125;8;Odontoiatria;2610;Devitalizzazione
+31;CAA016;36;36;4;Mammografia e ecografia;10800;Mammografia
+32;CAA016;10.56;10.56;1;Visite specialistiche;10500;Visita Specialistica
+33;CAA016;36;36;2;Analisi laboratorio;10600;Analisi Laboratorio
+34;CAA016;36;36;4;Mammografia e ecografia;10800;Mammografia
+35;CAA016;23.51;23.51;1;Visite specialistiche;10500;Visita Specialistica
+36;CAA018;85;42.5;8;Odontoiatria;2582;Ablazione Tartaro
+37;CAA018;85;42.5;1;Visite specialistiche;2;Visita Specialistica
+38;CAA028;90;49.5;4;Mammografia e ecografia;2224;Prestazione Grastoenterologia
+39;CAA028;17.35;17.35;2;Analisi laboratorio;10600;Analisi Laboratorio
+40;CAA028;100;50;1;Visite specialistiche;2;Visita Specialistica
+41;CAA028;58.7;58.7;2;Analisi laboratorio;10600;Analisi Laboratorio
+42;CAA028;80;40;8;Odontoiatria;2582;Ablazione Tartaro
+43;CAA033;120;60;1;Visite specialistiche;2;Visita Specialistica
+44;CAA033;120;66;4;Mammografia e ecografia;2223;Esame gravidanza
+45;CAA033;80;40;1;Visite specialistiche;2;Visita Specialistica
+46;CAA033;90;45;1;Visite specialistiche;2;Visita Specialistica
+47;CAA033;90;45;1;Visite specialistiche;2;Visita Specialistica
+48;CAA035;36.15;36.15;3;Diagnostica per immagini;10700;Diagnostica immagini
+49;CAA035;51;25.5;1;Visite specialistiche;2;Visita Specialistica
+50;CAA035;150;75;1;Visite specialistiche;2;Visita Specialistica
+51;CAA035;30.21;30.21;3;Diagnostica per immagini;10700;Diagnostica immagini
+52;CAA035;36.15;36.15;3;Diagnostica per immagini;10700;Diagnostica immagini
+53;CAA035;100;50;1;Visite specialistiche;2;Visita Specialistica
+54;CAA044;36;36;4;Mammografia e ecografia;10800;Mammografia
+55;CAA044;15.09;15.09;2;Analisi laboratorio;10600;Analisi Laboratorio
+56;CAA044;23.51;23.51;1;Visite specialistiche;10500;Visita Specialistica
+57;CAA044;36;36;4;Mammografia e ecografia;10800;Mammografia
+58;CAA057;130;65;1;Visite specialistiche;2;Visita Specialistica
+59;CAA057;300;125;8;Odontoiatria;2604;Otturazione
+60;CAA057;9.99;9.99;1;Visite specialistiche;10500;Visita Specialistica
+61;CAA057;14.1;14.1;2;Analisi laboratorio;10600;Analisi Laboratorio
+62;CAA059;60.1;60.1;2;Analisi laboratorio;10600;Analisi Laboratorio
+63;CAA059;36.15;36.15;4;Mammografia e ecografia;10800;Mammografia
+64;CAA059;18.95;18.95;1;Visite specialistiche;10500;Visita Specialistica
+65;CAA059;11.9;11.9;1;Visite specialistiche;10500;Visita Specialistica
+66;CAA059;36.15;36.15;3;Diagnostica per immagini;10700;Diagnostica immagini
+67;CAA059;70;35;1;Visite specialistiche;2;Visita Specialistica
+68;CAA059;70;35;8;Odontoiatria;2582;Ablazione Tartaro
+69;CAA062;148.19;74.1;8;Odontoiatria;2604;Otturazione
+70;CAA062;120;60;1;Visite specialistiche;2;Visita Specialistica
+71;CAA062;36.15;36.15;3;Diagnostica per immagini;10700;Diagnostica immagini
+72;CAA062;100;50;1;Visite specialistiche;2;Visita Specialistica
+73;CAA070;80;40;8;Odontoiatria;2582;Ablazione Tartaro
+74;CAA070;19.16;19.16;2;Analisi laboratorio;10600;Analisi Laboratorio
+75;CAA070;80;40;1;Visite specialistiche;2;Visita Specialistica
+76;CAA070;19.16;19.16;2;Analisi laboratorio;10600;Analisi Laboratorio
+77;CAA070;98.19;49.1;1;Visite specialistiche;2;Visita Specialistica
+78;CAA078;50;25;1;Visite specialistiche;2;Visita Specialistica
