@@ -190,4 +190,30 @@ dbClearResult(dbListResults(con)[[1]])
 
 # calcolo premio equo per peril
 
+res=DBI::dbSendQuery(con,'WITH 
+                          s AS (
+                          SELECT DISTINCT IdAnagrafica AS ID_ANA
+                          FROM policies
+                          ),
+                          r AS (
+                          SELECT CodAnagrafica AS ID_ANA, 
+                          SUM(ImportoLiquidato) AS COST,
+                          Descrizione AS Peril
+                          FROM claims 
+                          GROUP BY ID_ANA, Peril
+                          ),
+                          t AS (
+                          SELECT s.ID_ANA as ID_POL,
+                          IFNULL(r.COST,0) AS Y,
+                          r.Peril
+                          FROM s LEFT JOIN r ON s.ID_ANA=r.ID_ANA
+                          ) 
+                          SELECT Peril, AVG(Y) AS PREMIO_EQUO 
+                          FROM t
+                          WHERE Peril IS NOT NULL
+                          GROUP BY Peril
+                     ;')
+res=dbFetch(res)
+dbClearResult(dbListResults(con)[[1]])
+
 
