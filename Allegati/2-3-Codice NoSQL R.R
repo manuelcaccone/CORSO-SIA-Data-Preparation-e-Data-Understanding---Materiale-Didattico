@@ -17,11 +17,11 @@ claims %>%
   group_by(peril=Descrizione) %>%
   summarize(Num_Sx=length(ID))
 
-# calcolo numero di sinistri per peril con data.table
+# calcolo costo medio per peril con data.table
 
 library(data.table)
 claims=data.table(claims)
-claims[,.(Mean_Cost=mean(ImportoLiquidato)),by=.(Peril=Descrizione)]
+claims[,Mean_Cost:=mean(ImportoLiquidato),by=.(Peril=Descrizione)]
 
 # calcolo il premio equo per peril 
 

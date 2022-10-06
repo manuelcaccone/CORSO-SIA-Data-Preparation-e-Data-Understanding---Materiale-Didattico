@@ -21,11 +21,6 @@ dbClearResult(dbListResults(con)[[1]])
 
 # seleziono i costi della tabella claims con ID sinistro e ID anagrafica
 
-res=DBI::dbSendQuery(con,'DESCRIBE claims;')
-res=dbFetch(res)
-dbClearResult(dbListResults(con)[[1]])
-
-
 res=DBI::dbSendQuery(con,'SELECT ID, 
                       CodAnagrafica AS ID_ANA, 
                      ImportoLiquidato AS Cost 
@@ -63,6 +58,18 @@ res=DBI::dbSendQuery(con,'SELECT
 res=dbFetch(res)
 dbClearResult(dbListResults(con)[[1]])
 
+# conto il numero di sinistri per tipologia di peril (WINDOW FUNCTION)
+
+res=DBI::dbSendQuery(con,'SELECT ID, 
+                          Descrizione AS Peril,
+                          COUNT(*) OVER(PARTITION BY Descrizione) AS N_SX
+                          FROM claims
+                          ;')
+res=dbFetch(res)
+dbClearResult(dbListResults(con)[[1]])
+
+
+
 # calcolo la frequenza sinistri per tipologia di PERIL 
 res=DBI::dbSendQuery(con,'SELECT t.Peril as Peril, 
                           t.NUM_SX / t.SUMSX AS FREQ_SX
@@ -96,7 +103,8 @@ res=DBI::dbSendQuery(con,'WITH
                           SELECT s.ID_ANA as ID_POL,
                           IFNULL(r.NUM_SX,0) AS SX
                           FROM s LEFT JOIN r ON s.ID_ANA=r.ID_ANA
-                          ) 
+                          )
+                          
                           SELECT DISTINCT(SX) AS SINISTRI, COUNT(SX) AS RISCHI_ANNO 
                           FROM t
                           GROUP BY SINISTRI 
@@ -122,6 +130,7 @@ res=DBI::dbSendQuery(con,'WITH
                           IFNULL(r.NUM_SX,0) AS SX
                           FROM s LEFT JOIN r ON s.ID_ANA=r.ID_ANA
                           ),
+                          
                           IndSin AS(
                           SELECT  SUM(w.SINISTRI * w.RISCHI_ANNO) as N,
                           SUM(SINISTRI) AS ID
@@ -182,6 +191,7 @@ res=DBI::dbSendQuery(con,'WITH
                           IFNULL(r.COST,0) AS Y
                           FROM s LEFT JOIN r ON s.ID_ANA=r.ID_ANA
                           ) 
+                          
                           SELECT AVG(Y) AS PREMIO_EQUO 
                           FROM t
                      ;')
