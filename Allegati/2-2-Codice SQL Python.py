@@ -1,3 +1,6 @@
+!pip install PyMySQL
+!pip install tabulate
+
 # apro la connessione al database, provo fetching con tutte le righe
 import pymysql
 from tabulate import tabulate
