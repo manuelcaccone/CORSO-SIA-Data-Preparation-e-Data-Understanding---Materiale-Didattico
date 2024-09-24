@@ -21,11 +21,20 @@ claims %>%
 
 library(data.table)
 claims=data.table(claims)
-claims[,Mean_Cost:=mean(ImportoLiquidato),by=.(Peril=Descrizione)]
+
+claims[,Mean_Cost:=mean(ImportoLiquidato),by=.(Peril=Descrizione)]  
+claims[,.(Mean_Cost=mean(ImportoLiquidato)),by=.(Peril=Descrizione)]  
+
 
 # calcolo il premio equo per peril 
 
 claims[,D:=.N]
 claims[,.(Equity_Premium=mean(ImportoLiquidato)*length(Descrizione)/unique(D)),by=.(Peril=Descrizione)]
 
+# usando sqldf 
+library(sqldf)
+
+result <- sqldf("SELECT Descrizione AS peril, AVG(ImportoLiquidato) AS Mean_Cost 
+                 FROM claims 
+                 GROUP BY Descrizione")
 
